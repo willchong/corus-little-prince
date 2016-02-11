@@ -7,19 +7,125 @@
 </head>
 
 <body>
-    <!-- @@include templates/header.html -->
-
-    <div class="background">
-        <div class="container">
-            <div class="contest-form">
-                <div id="little-prince">
-                    
+    
+    <div class="entry-page">
+        <!-- @@include templates/header.html -->
+        <div class="main">
+            <div class="entry-form">
+                <div class="intro">
+                    <img src="img/movie-title.png" alt="">
                 </div>
             </div>
+            <div class="form-header">
+                <h1>ENTER FOR A CHANCE <br>TO WIN AN UNDER THE STARS ADVENTURE!</h1>
+            </div>
+            <div id="entry-form">
+                <div id="under13-section">
+                    <h2><span> You Can Ask Your Parents To Enter This Contest</span></h2>
+                    <div id="parental-error-list"><ul></ul></div>
+                    <br />
+                    <p>Only entrants who have reached the age of majority are allowed to enter the contest.<p>
+                    <input type="checkbox" name="under13" id="under13" />
+                    <label>I have reached the age of majority.</label>
+                    <br /><br />
+                </div>
+                <div id="your-information-section">
+                    <h2><span>Parents - Please Fill Out The Form Below</span></h2>
+                    <div id="personal-error-list"><ul></ul></div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>First Name:</label>
+                        </div>
+                        <div class="col-sm-6 right">
+                            <input type="text" id="firstname" name="firstname" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Last Name:</label>
+                        </div>
+                        <div class="col-sm-6 right">
+                            <input type="text" id="lastname" name="lastname" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Phone Number:</label>
+                        </div>
+                        <div class="col-sm-6 right">
+                            <input type="text" id="phone1" name="phone1" size="3" maxlength="3" class="multi" />
+                            <input type="text" id="phone2" name="phone2" size="3" maxlength="3" class="multi" />
+                            <input type="text" id="phone3" name="phone3" size="4" maxlength="4" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Email Address:</label>
+                        </div>
+                        <div class="col-sm-6 right">
+                            <input type="text" id="email" name="email" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Province:</label>
+                        </div>
+                        <div class="col-sm-6 right">
+                            <pn:ProvinceDropDown ID="province" runat="server" />
+                        </div>
+                    </div>
+                </div>
+                <div id="your-child-information-section">
+                    <h2><span>Your Child’s Information (Optional)</span></h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label>Your Child's First Name:</label>
+                        </div>
+                        <div class="col-sm-6 right">
+                            <input type="text" id="childname" name="childname" />
+                        </div>
+                    </div>
+                </div>
+                <div id="rules-section">
+                    <h2><span>Rules &amp; Regulations</span></h2>
+                    <div id="rules-error-list"><ul></ul></div>
+                    <br />
+                    <input type="checkbox" id="readrules" name="readrules" />
+                    <p>I have read and agree to the <a href="http://www.ytv.com/info/terms-of-use" target="_blank">rules and regulations</a>.</p>
+                </div>
+                <div id="captcha">
+                    ##CAPTCHA##
+                </div>
+                <div id="optin-section">
+                    <div id="extra-error-list"><ul></ul></div>
+                    <br />
+                    <input type="checkbox" id="permission" name="permission" />
+                    <p>Yes, I would like to provide Entertainment One Films Canada Inc. with my first name and email address in order to receive special offers and promotions from them.</p> 
+                </div>
+                <div id="submit-form">
+                    <a href="#" id="entry-button"><img src="img/submit-form.png" alt=""></a>
+                </div>
+                
+                <div id="legal">
+                    <p>By checking the opt-in checkbox and providing your personal information above, you agree to Entertainment One Films Canada Inc. collection and use of it as described in the Entertainment One Films Canada Inc. Privacy Policy. You may withdraw your consent at any time by clicking the unsubscribe link at the bottom of Entertainment One Films Canada Inc. emails. If you have any questions, contact Entertainment One Films Canada Inc. or write to Entertainment One Films Canada Inc. at:</p>
+                    <p class="center">
+                        Entertainment One Films Canada Inc.<br/>
+                        134 Peter Street<br/>
+                        Suite 700<br/>
+                        Toronto, ON<br/>
+                        M5V 2H2
+                    </p>
+                </div>
+            </div>   
+            
+            <input type="hidden" name="telephone" id="telephone" />
+            <input type="hidden" name="postalcode" id="postalcode" />
         </div>
     
     <!-- @@include templates/footer.html -->
-	</div>
+    
+    </div>
 
 	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="js/script.js"></script>

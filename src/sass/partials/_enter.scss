@@ -1,17 +1,191 @@
-
-.contest-form {
-	max-width: 960px;
-	min-height: 1274px;
-	margin: 0 auto;
-	margin-top: 510px;
-	background: url("../img/form-bg.png") no-repeat;
-	background-size: 100% 100%;
-	
+.entry-page {
+	background: #fff url('../img/entry-bg.jpg') top center no-repeat;
+	width: 100%;
+	min-height: 2300px;
+	@include breakpoint(medium) {
+		// background-size: 1520px;
+	}
 	@include breakpoint(small) {
-		padding: 0 24px;
-		margin-top: 360px;
+		// background-size: 1300px;
+	}
+	@include breakpoint(xsmall) {
+		// background-size: 1000px;
+	}
+	@include breakpoint(xxsmall) {
+		// background-size: 860px;
+		// background-position-x: 42%;
 	}
 
+	.main {
+		max-width: 960px;
+		margin: 0 auto;
+		.entry-form {
+			max-width: 100%;
+			text-align: center;
+			.intro {
+				margin: 20px auto 0;
+				max-width: 423px;
+				img {
+					width: 100%;
+				}
+			}
+		}
+		.form-header {
+			width: 100%;
+			max-width: 750px;
+			margin: 0 auto;
+			margin-top: 480px;
+			h1 {
+				text-align: center;
+				color: $brown;
+				font-size: 3.5rem;
+				font-family: "Neutra Text Bold", sans-serif;
+				text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
+			}
+		}
+		#entry-form {
+			width: 100%;
+			max-width: 750px;
+			margin: 0 auto;
+			margin-top: 70px;
+			text-align: left;
+			font-family: "Helvetica Neue LT Std", sans-serif;
+			#under13-section {
+				h2 {
+					color: $brown;
+					font-size: 3.2rem;
+					font-family: "Neutra Text Bold", sans-serif;
+				}
+				p {
+					font-family: "Neutra Text Bold", sans-serif;
+					font-size: 1.8rem;
+				}
+				label {
+					font-family: "Helvetica Neue LT Std", sans-serif;
+					font-size: 1.8rem;
+				}
+			}
 
+			#your-information-section {
+				margin-bottom: 40px;
+				h2 {
+					color: $brown;
+					font-size: 3.2rem;
+					font-family: "Neutra Text Bold", sans-serif;
+				}
+				label {
+					font-family: "Helvetica Neue LT Std", sans-serif;
+					font-size: 2.0rem;
+				}
+				input {
+					width: 266px;
+					height: 36px;
+					-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.4);
+					-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.4);
+					box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.4);
+					border: none;
+					font-size: 2rem;
+					&#phone1 {
+						width: 54px;
+						margin-right: 15px;
+					}
+					&#phone2 {
+						width: 54px;
+						margin-right: 15px;
+					}
+					&#phone3 {
+						width: 123px;
+					}
+				}
+				.row {
+					margin-bottom: 24px;
+				}
+			}
+
+			#your-child-information-section {
+				margin-bottom: 40px;
+				h2 {
+					color: $brown;
+					font-size: 3.2rem;
+					font-family: "Neutra Text Bold", sans-serif;
+				}
+				label {
+					font-family: "Helvetica Neue LT Std", sans-serif;
+					font-size: 2.0rem;
+				}
+				input {
+					width: 266px;
+					height: 36px;
+					-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.4);
+					-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.4);
+					box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.4);
+					border: none;
+					font-size: 2rem;
+				}
+			}
+
+			#rules-section {
+				h2 {
+					color: $brown;
+					font-size: 3.2rem;
+					font-family: "Neutra Text Bold", sans-serif;
+				}
+				p {
+					font-family: "Helvetica Neue LT Std", sans-serif;
+					font-size: 2rem;
+					display: inline-block;
+					a {
+						text-decoration: underline;
+						color: $black;
+						&:hover {
+							color: $brown;
+						}
+					}
+				}
+				label {
+					font-family: "Helvetica Neue LT Std", sans-serif;
+					font-size: 1.8rem;
+				}
+			}
+			
+			#optin-section {
+				font-size: 0;
+				input {
+					width: 50px;
+					height: 50px;
+					display:inline-block;
+				}
+				p {
+					font-family: "Helvetica Neue LT Std", sans-serif;
+					font-size: 1.5rem;
+					width: calc(100% - 50px);
+					display: inline-block;
+				}
+			}
 		
+			.right {
+				text-align: right;
+			}
+
+			#submit-form {
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 45px;
+			}
+
+			#legal {
+				margin-top: 60px;
+				p {
+					font-family: "Helvetica Neue LT Std", sans-serif;
+					font-size: 1.2rem;
+					&.center {
+						text-align: center;
+					}
+				}
+			}
+
+		}
+
+	}
+	
 }

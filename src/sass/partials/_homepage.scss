@@ -1,33 +1,138 @@
 .background {
-	// background: #000 url('../img/zootopia-bg.jpg') top center no-repeat;
+	background: #fff url('../img/full-bg.jpg') top center no-repeat;
+	width: 100%;
+	min-height: 2250px;
 	@include breakpoint(medium) {
-		background-size: 1520px;
+		// background-size: 1520px;
 	}
 	@include breakpoint(small) {
-		background-size: 1300px;
+		// background-size: 1300px;
 	}
 	@include breakpoint(xsmall) {
-		background-size: 1000px;
+		// background-size: 1000px;
 	}
 	@include breakpoint(xxsmall) {
-		background-size: 860px;
-		background-position-x: 42%;
+		// background-size: 860px;
+		// background-position-x: 42%;
 	}
-}
 
-.main {
-	max-width: 992px;
-	margin: 0 auto;
-	padding: 0;
-
-	.content {
+	.main {
+		max-width: 960px;
 		margin: 0 auto;
+		text-align: center;
+		
+		.title {
+			margin: 10px auto 0;
+			img {
+				margin: 0 auto;
+				max-width: 100%;
+			}
+			@include breakpoint(xsmall) {
+				padding: 20px;
+			}
+		}
+		
+		.video-holder {
+			max-width: 550px;
+			margin: 350px auto 0;
 
+			-webkit-box-shadow: 7px 7px 18px 0px rgba(0,0,0,0.6);
+			-moz-box-shadow: 7px 7px 18px 0px rgba(0,0,0,0.6);
+			box-shadow: 7px 7px 18px 0px rgba(0,0,0,0.6);
+
+			.video-header {
+				background-color: $brown;
+				color: $white;
+				font-size: 3rem;
+				padding-top: 4px;
+				font-family: 'Helvetica Neue LT Std Heavy', sans-serif;
+				text-align: center;
+				height: 42px;
+				vertical-align: middle;
+			}
+			.video {
+				position: relative;
+				width: 100%;
+				padding-bottom:50%;
+				height:0;
+				overflow:hidden;
+
+				iframe, object, embed {
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%
+				}
+			}
+		}
+
+		.movie-title {
+			margin: 0 auto;
+			max-width: 550px;
+			img {
+				margin: 24px auto;
+				width: 100%;
+			}
+			@include breakpoint(xsmall) {
+				padding: 20px;
+			}
+		}
+
+		.movie-copy {
+			margin: 0 auto;
+			max-width: 550px;
+			p {
+				font-size: 1.8rem;
+				line-height: 1.2;
+				color: $black;
+				font-family: 'Neutra Text Bold', sans-serif;
+				text-align: left;
+				@include breakpoint(xsmall) {
+					padding: 20px;
+				}
+			}
+		}
+
+		.win {
+			margin: 0 auto;
+			max-width: 638px;
+			position: relative;
+			margin-top: -50px;
+			img {
+				width: 100%;
+			}
+			@include breakpoint(xsmall) {
+				padding: 20px;
+			}
+		}
+
+		.enter {
+			margin: 0 auto;
+			max-width: 279px;
+			position: relative;
+			margin-top: -30px;
+			@include breakpoint(xsmall) {
+				margin-top: -10px;
+			}
+		}
+
+		.legal {
+			margin: 0 auto;
+			max-width: 550px;
+			p {
+				font-size: 1.2rem;
+				line-height: 1.2;
+				color: $black;
+				font-family: 'Neutra Text Bold', sans-serif;
+				text-align: left;
+				width: 400px;
+				margin-top: 20px;
+				@include breakpoint(xsmall) {
+					padding: 0 20px;
+				}
+			}
+		}
 	}
-	
-	@include breakpoint(small) {
-
-	}
-
 
 }

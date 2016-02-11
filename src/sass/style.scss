@@ -9,25 +9,23 @@
         "partials/enter";
 
 
-body {
+body, html {
     padding: 0px;
-    background-color: #000;
-    font-family: "dhelmedium", sans-serif;
+    font-size: 10px;
+    background-color: #fff;
+    font-family: sans-serif;
 }
 
 h1 {
-    color: $black;
-    font-family: "dbrooksamlight", sans-serif;
+    color: $brown;
 }
 
 h2 {
-    color: $yellow;
-    font-family: "dbrooksamlight", sans-serif;
+    color: $brown;
 }
 
 h3 {
-    color: $yellow;
-    font-family: "dbrooksamlight", sans-serif;
+    color: $brown;
 }
 
 a:hover {
