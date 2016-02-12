@@ -1,13 +1,6 @@
 @import "libs/normalize",
         "libs/bootstrap",
-        "partials/constants",
-        "partials/fonts",
-        "partials/header",
-        "partials/footer",
-        "partials/thanks",
-        "partials/homepage",
-        "partials/enter";
-
+        "partials/constants";
 
 body, html {
     padding: 0px;
@@ -31,4 +24,13 @@ h3 {
 a:hover {
     text-decoration: none;
 }
+
+
+
+@import "partials/fonts",
+        "partials/header",
+        "partials/footer",
+        "partials/thanks",
+        "partials/homepage",
+        "partials/enter";
 

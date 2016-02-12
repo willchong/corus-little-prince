@@ -50,6 +50,7 @@
 			margin-top: 70px;
 			text-align: left;
 			font-family: "Helvetica Neue LT Std", sans-serif;
+
 			#under13-section {
 				h2 {
 					color: $brown;
@@ -64,6 +65,22 @@
 					font-family: "Helvetica Neue LT Std", sans-serif;
 					font-size: 1.8rem;
 				}
+				input[type="checkbox"] {
+				    display:none;
+				}
+				input[type="checkbox"] + label span {
+				    display:inline-block;
+				    width:45px;
+				    height:45px;
+				    margin:-1px 4px 0 0;
+				    vertical-align:middle;
+				    background:url('../img/checkbox.png') left top no-repeat;
+				    cursor:pointer;
+				}
+				input[type="checkbox"]:checked + label span {
+				    background:url('../img/checkbox.png') left -45px no-repeat;
+				}
+
 			}
 
 			#your-information-section {
@@ -78,7 +95,7 @@
 					font-size: 2.0rem;
 				}
 				input {
-					width: 266px;
+					min-width: 266px;
 					height: 36px;
 					-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.4);
 					-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.4);
@@ -86,15 +103,15 @@
 					border: none;
 					font-size: 2rem;
 					&#phone1 {
-						width: 54px;
+						min-width: 54px;
 						margin-right: 15px;
 					}
 					&#phone2 {
-						width: 54px;
+						min-width: 54px;
 						margin-right: 15px;
 					}
 					&#phone3 {
-						width: 123px;
+						min-width: 123px;
 					}
 				}
 				.row {
@@ -114,7 +131,7 @@
 					font-size: 2.0rem;
 				}
 				input {
-					width: 266px;
+					min-width: 266px;
 					height: 36px;
 					-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.4);
 					-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.4);
@@ -122,6 +139,7 @@
 					border: none;
 					font-size: 2rem;
 				}
+
 			}
 
 			#rules-section {
@@ -146,6 +164,21 @@
 					font-family: "Helvetica Neue LT Std", sans-serif;
 					font-size: 1.8rem;
 				}
+				input[type="checkbox"] {
+				    display:none;
+				}
+				input[type="checkbox"] + label span {
+				    display:inline-block;
+				    width:45px;
+				    height:45px;
+				    margin:-1px 4px 0 0;
+				    vertical-align:middle;
+				    background:url('../img/checkbox.png') left top no-repeat;
+				    cursor:pointer;
+				}
+				input[type="checkbox"]:checked + label span {
+				    background:url('../img/checkbox.png') left -45px no-repeat;
+				}
 			}
 			
 			#optin-section {
@@ -153,18 +186,40 @@
 				input {
 					width: 50px;
 					height: 50px;
-					display:inline-block;
+					display:inline;
+					vertical-align: top;
 				}
 				p {
 					font-family: "Helvetica Neue LT Std", sans-serif;
 					font-size: 1.5rem;
 					width: calc(100% - 50px);
 					display: inline-block;
+					vertical-align: top;
+				}
+				input[type="checkbox"] {
+				    display:none;
+				}
+				input[type="checkbox"] + label span {
+				    display:inline-block;
+				    width:45px;
+				    height:45px;
+				    margin:-1px 4px 0 0;
+				    vertical-align:top;
+				    background:url('../img/checkbox.png') left top no-repeat;
+				    cursor:pointer;
+				}
+				input[type="checkbox"]:checked + label span {
+				    background:url('../img/checkbox.png') left -45px no-repeat;
 				}
 			}
 		
 			.right {
 				text-align: right;
+			}
+
+			#captcha {
+				text-align: center;
+				margin: 24px 0;
 			}
 
 			#submit-form {
@@ -182,6 +237,61 @@
 						text-align: center;
 					}
 				}
+			}
+
+			.entry-padding {
+				padding-left: 70px;
+				@include breakpoint(small) {
+					padding-left: 0;
+				}
+			}
+
+			@include breakpoint(small) {
+				padding: 0 12px;
+			}
+			@include breakpoint(special) {
+				.col-xs-5, .col-xs-7 {
+					width: 100%;
+					input {
+						width: 100%;
+						display: inline-block;
+						&#phone1 {
+							width: 20%;
+							margin-right: 5%;
+						}
+						&#phone2 {
+							width: 20%;
+							margin-right: 5%;
+						}
+						&#phone3 {
+							width: 50%;
+						}
+					}
+				}
+
+			}
+			@include breakpoint(xxsmall) {
+				.col-xs-5, .col-xs-7 {
+					input {
+						width: 100%;
+						display: inline-block;
+						&#phone1 {
+							min-width: auto !important;
+							width: 20%;
+							margin-right: 5%;
+						}
+						&#phone2 {
+							min-width: auto !important;
+							width: 20%;
+							margin-right: 5%;
+						}
+						&#phone3 {
+							min-width: auto !important;
+							width: 50%;
+						}
+					}
+				}
+
 			}
 
 		}

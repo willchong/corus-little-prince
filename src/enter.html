@@ -21,78 +21,88 @@
             </div>
             <div id="entry-form">
                 <div id="under13-section">
-                    <h2><span> You Can Ask Your Parents To Enter This Contest</span></h2>
+                    <h2><img src="img/entry-star.png" alt=""><span>You Can Ask Your Parents To Enter This Contest</span></h2>
                     <div id="parental-error-list"><ul></ul></div>
                     <br />
-                    <p>Only entrants who have reached the age of majority are allowed to enter the contest.<p>
-                    <input type="checkbox" name="under13" id="under13" />
-                    <label>I have reached the age of majority.</label>
+                    <div class="entry-padding">
+                        <p>Only entrants who have reached the age of majority are allowed to enter the contest.<p>
+                        <input type="checkbox" name="under13" id="under13" />
+                        <label for="under13"><span></span></label>
+                        <label>I have reached the age of majority.</label>
+                    </div>
                     <br /><br />
                 </div>
                 <div id="your-information-section">
-                    <h2><span>Parents - Please Fill Out The Form Below</span></h2>
+                    <h2><img src="img/entry-star.png" alt=""><span>Parents - Please Fill Out The Form Below</span></h2>
                     <div id="personal-error-list"><ul></ul></div>
                     <br />
+                    <div class="entry-padding">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-xs-5">
                             <label>First Name:</label>
                         </div>
-                        <div class="col-sm-6 right">
+                        <div class="col-xs-7 right">
                             <input type="text" id="firstname" name="firstname" />
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-xs-5">
                             <label>Last Name:</label>
                         </div>
-                        <div class="col-sm-6 right">
+                        <div class="col-xs-7 right">
                             <input type="text" id="lastname" name="lastname" />
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-xs-5">
                             <label>Phone Number:</label>
                         </div>
-                        <div class="col-sm-6 right">
+                        <div class="col-xs-7 right">
                             <input type="text" id="phone1" name="phone1" size="3" maxlength="3" class="multi" />
                             <input type="text" id="phone2" name="phone2" size="3" maxlength="3" class="multi" />
                             <input type="text" id="phone3" name="phone3" size="4" maxlength="4" />
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-xs-5">
                             <label>Email Address:</label>
                         </div>
-                        <div class="col-sm-6 right">
+                        <div class="col-xs-7 right">
                             <input type="text" id="email" name="email" />
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-xs-5">
                             <label>Province:</label>
                         </div>
-                        <div class="col-sm-6 right">
+                        <div class="col-xs-7 right">
                             <pn:ProvinceDropDown ID="province" runat="server" />
                         </div>
                     </div>
+                    </div>
                 </div>
                 <div id="your-child-information-section">
-                    <h2><span>Your Child’s Information (Optional)</span></h2>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <label>Your Child's First Name:</label>
-                        </div>
-                        <div class="col-sm-6 right">
-                            <input type="text" id="childname" name="childname" />
+                    <h2><img src="img/entry-star.png" alt=""><span>Your Child’s Information (Optional)</span></h2>
+                    <div class="entry-padding">
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <label>Your Child's First Name:</label>
+                            </div>
+                            <div class="col-xs-7 right">
+                                <input type="text" id="childname" name="childname" />
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div id="rules-section">
-                    <h2><span>Rules &amp; Regulations</span></h2>
+                    <h2><img src="img/entry-star.png" alt=""><span>Rules &amp; Regulations</span></h2>
                     <div id="rules-error-list"><ul></ul></div>
                     <br />
-                    <input type="checkbox" id="readrules" name="readrules" />
+                    <div class="entry-padding">
+                    <input type="checkbox" name="readrules" id="readrules" />
+                    <label for="readrules"><span></span></label>
                     <p>I have read and agree to the <a href="http://www.ytv.com/info/terms-of-use" target="_blank">rules and regulations</a>.</p>
+                    </div>
                 </div>
                 <div id="captcha">
                     ##CAPTCHA##
@@ -100,8 +110,11 @@
                 <div id="optin-section">
                     <div id="extra-error-list"><ul></ul></div>
                     <br />
+                    <div class="entry-padding">
                     <input type="checkbox" id="permission" name="permission" />
+                    <label for="permission"><span></span></label>
                     <p>Yes, I would like to provide Entertainment One Films Canada Inc. with my first name and email address in order to receive special offers and promotions from them.</p> 
+                    </div>
                 </div>
                 <div id="submit-form">
                     <a href="#" id="entry-button"><img src="img/submit-form.png" alt=""></a>
