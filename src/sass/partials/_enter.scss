@@ -1,6 +1,7 @@
 .entry-page {
 	background: #fff url('../img/entry-bg.jpg') top center no-repeat;
 	width: 100%;
+	background-size: cover;
 	min-height: 2300px;
 	@include breakpoint(medium) {
 		// background-size: 1520px;
@@ -14,6 +15,12 @@
 	@include breakpoint(xxsmall) {
 		// background-size: 860px;
 		// background-position-x: 42%;
+	}
+
+	#parental-error-list, #rules-error-list, #captcha-error-list {
+		font-size: 2rem;
+		color: red;
+		text-align: center;
 	}
 
 	.main {
@@ -47,15 +54,15 @@
 			width: 100%;
 			max-width: 750px;
 			margin: 0 auto;
-			margin-top: 70px;
 			text-align: left;
 			font-family: "Helvetica Neue LT Std", sans-serif;
 
 			#under13-section {
 				h2 {
 					color: $brown;
-					font-size: 3.2rem;
+					font-size: 3rem;
 					font-family: "Neutra Text Bold", sans-serif;
+					margin: 0;
 				}
 				p {
 					font-family: "Neutra Text Bold", sans-serif;
@@ -87,8 +94,9 @@
 				margin-bottom: 40px;
 				h2 {
 					color: $brown;
-					font-size: 3.2rem;
+					font-size: 3rem;
 					font-family: "Neutra Text Bold", sans-serif;
+					margin: 0;
 				}
 				label {
 					font-family: "Helvetica Neue LT Std", sans-serif;
@@ -117,14 +125,28 @@
 				.row {
 					margin-bottom: 24px;
 				}
+				select {
+					&#province {
+						min-width: 266px;
+						font-size: 1.6rem;
+						height: 36px;
+						line-height: 36px;
+						background-color: #fff;
+						border: none;
+						-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.4);
+						-moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.4);
+						box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.4);
+					}
+				}
 			}
 
 			#your-child-information-section {
 				margin-bottom: 40px;
 				h2 {
 					color: $brown;
-					font-size: 3.2rem;
+					font-size: 3rem;
 					font-family: "Neutra Text Bold", sans-serif;
+					margin: 0;
 				}
 				label {
 					font-family: "Helvetica Neue LT Std", sans-serif;
@@ -145,8 +167,9 @@
 			#rules-section {
 				h2 {
 					color: $brown;
-					font-size: 3.2rem;
+					font-size: 3rem;
 					font-family: "Neutra Text Bold", sans-serif;
+					margin: 0;
 				}
 				p {
 					font-family: "Helvetica Neue LT Std", sans-serif;
@@ -220,12 +243,26 @@
 			#captcha {
 				text-align: center;
 				margin: 24px 0;
+				.g-recaptcha {
+					div {
+						div {
+							margin: 0 auto;
+						}
+					}
+				}
+			}
+			
+			.error {
+				-webkit-box-shadow: 0px 0px 10px 0px rgba(255,0,0,1) !important;
+				-moz-box-shadow: 0px 0px 10px 0px rgba(255,0,0,1) !important;
+				box-shadow: 0px 0px 10px 0px rgba(255,0,0,1) !important;
 			}
 
 			#submit-form {
 				text-align: center;
 				margin: 0 auto;
 				margin-top: 45px;
+				padding-bottom: 90px;
 			}
 
 			#legal {
@@ -252,7 +289,7 @@
 			@include breakpoint(special) {
 				.col-xs-5, .col-xs-7 {
 					width: 100%;
-					input {
+					input, select {
 						width: 100%;
 						display: inline-block;
 						&#phone1 {
@@ -272,7 +309,7 @@
 			}
 			@include breakpoint(xxsmall) {
 				.col-xs-5, .col-xs-7 {
-					input {
+					input, select {
 						width: 100%;
 						display: inline-block;
 						&#phone1 {
